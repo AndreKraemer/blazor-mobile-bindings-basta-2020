@@ -15,14 +15,6 @@
 
     private async Task NavigateToAsnyc()
     {
-        var placemark = new Placemark
-        {
-            CountryName = country,
-            Thoroughfare = street,
-            Locality = city,
-            PostalCode = zip
-        };
 
-        await Map.OpenAsync(placemark);
     }
 }

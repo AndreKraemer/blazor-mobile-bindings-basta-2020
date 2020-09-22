@@ -1,6 +1,4 @@
 ﻿using System;
-using MbbConferenceDemo.Sessions;
-using MbbConferenceDemo.Speakers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.MobileBlazorBindings;
 using Microsoft.Extensions.Hosting;
@@ -18,13 +16,11 @@ namespace MbbConferenceDemo
                 {
                     // Register app-specific services
                     //services.AddSingleton<AppState>();
-                    services.AddSingleton<ISpeakerService, DummySpeakerService>();
-                    services.AddSingleton<ISessionService, DummySessionsService>();
                 })
                 .Build();
 
-            //MainPage = new ContentPage();
-            host.AddComponent<AppShell>(parent: this);
+            MainPage = new ContentPage();
+            host.AddComponent<HelloWorld>(parent: MainPage);
         }
 
         protected override void OnStart()
