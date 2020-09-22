@@ -1,0 +1,8 @@
+﻿<StackLayout class="list-row">
+    <Label Text="@Session.Title" class="headline"></Label>
+    <Label Text="@Session.Speaker" class="subline"></Label>
+</StackLayout>
+
+@code {
+    [Parameter] public Session Session { get; set; }
+}

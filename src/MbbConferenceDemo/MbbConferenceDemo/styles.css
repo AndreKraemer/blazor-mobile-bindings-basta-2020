@@ -1,0 +1,10 @@
+﻿.list-row {
+    margin: 10;
+}
+
+.headline {
+    font-style: bold;
+}
+.subline {
+    font-style: italic;
+}

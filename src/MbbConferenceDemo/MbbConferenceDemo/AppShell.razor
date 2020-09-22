@@ -1,0 +1,20 @@
+﻿@using MbbConferenceDemo.Sessions
+@using MbbConferenceDemo.Speakers
+<Shell>
+    <FlyoutHeader>
+        @*<StyleSheet Resource="styles.css" Assembly="GetType().Assembly"></StyleSheet>*@
+        <StackLayout Padding="20">
+            <Label Text="BASTA 2020" TextColor="Color.White" FontSize="20"></Label>
+            <Label Text="Mobile Blazor Bindings Demo" TextColor="Color.White"></Label>
+        </StackLayout>
+    </FlyoutHeader>
+    <ChildContent>
+        <ShellContent Title="Programm" Route="sessions"><SessionsPage/></ShellContent>
+        <ShellContent Title="Sprecher" Route="speakers"><SpeakersPage/></ShellContent>
+        <ShellContent Title="Über" Route="about"><AboutPage/></ShellContent>
+    </ChildContent>
+</Shell>
+
+@code {
+
+}

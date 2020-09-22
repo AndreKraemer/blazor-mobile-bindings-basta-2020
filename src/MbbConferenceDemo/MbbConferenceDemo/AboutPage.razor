@@ -1,0 +1,28 @@
+﻿<ContentPage Title="Über">
+    <StackLayout Padding="20">
+        <Label Text="@conferenceName" FontSize="25"></Label>
+        <Label Text="@($"{street}, {zip} {city}")"></Label>
+        <Button Text="In Karte öffnen" OnClick="NavigateToAsnyc"></Button>
+    </StackLayout>
+</ContentPage>
+
+@code {
+    string conferenceName = "BASTA 2020";
+    string street = "Rheinstraße 66";
+    string zip = "55116";
+    string city = "Mainz";
+    string country = "Germany";
+
+    private async Task NavigateToAsnyc()
+    {
+        var placemark = new Placemark
+        {
+            CountryName = country,
+            Thoroughfare = street,
+            Locality = city,
+            PostalCode = zip
+        };
+
+        await Map.OpenAsync(placemark);
+    }
+}
